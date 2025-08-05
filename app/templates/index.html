@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube QA with LLM</title>
+</head>
+<body>
+    <h2>🎥 YouTube Transcript Q&A</h2>
+
+    <form method="post" action="/ask">
+        <label>Search YouTube for:</label><br>
+        <input type="text" name="search_term" value="{{ search_term or '' }}" required><br><br>
+
+        <label>Your Question:</label><br>
+        <input type="text" name="question" value="{{ question or '' }}" required><br><br>
+
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+        <h3>🧠 Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+
+    {% if videos %}
+        <h3>🎬 Related Videos:</h3>
+        <ul>
+            {% for video in videos %}
+                <li><a href="{{ video.url }}" target="_blank">{{ video.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

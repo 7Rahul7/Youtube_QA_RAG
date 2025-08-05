@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+jinja2
+youtube-search
+youtube-transcript-api
+langchain
+faiss-cpu
+transformers
+sentence-transformers
+torch
