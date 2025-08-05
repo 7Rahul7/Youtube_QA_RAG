@@ -154,8 +154,7 @@ huggingface_hub
 
 ## 🧑‍💻 Author
 
-**Your Name**
+**Keshab Adhikari**
 
 🔗 GitHub: [@7Rahul7](https://github.com/7Rahul7)
 
----
